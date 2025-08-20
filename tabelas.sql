@@ -27,15 +27,15 @@ CREATE TABLE feedback (
     title VARCHAR(100) NOT NULL,
     description TEXT,
      curso_id INT REFERENCES cursos(curso_id),
-    created_at TIMESTAMP DEFAULT now(),
     alun_id INT REFERENCES alunos (alun_id)
+     created_at TIMESTAMP DEFAULT now(),
 );
 
 /*tabela de comentarios*/
 CREATE TABLE comment (
     comment_id SERIAL PRIMARY KEY,
     comment TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT now(),
     feed_id INT REFERENCES feedback(feed_id),
     alun_id INT REFERENCES alunos(alun_id)
+    created_at TIMESTAMP DEFAULT now(),
 );
