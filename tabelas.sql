@@ -16,10 +16,23 @@ CREATE TABLE cursos (
     Nivel VARCHAR(100) NOT NULL,
     Tempo VARCHAR(100) NOT NULL,
     Periodo VARCHAR(100) NOT NULL,
-     Materia VARCHAR(100) NOT NULL,
 
- 
 );
+
+
+/*Tabela aulas*/
+CREATE TABLE aulas (
+    Materias SERIAL PRIMARY KEY,
+     horario VARCHAR(100) NOT NULL,
+    avaliações VARCHAR(100) NOT NULL,
+     VARCHAR(100) NOT NULL,
+    alun_id VARCHAR(100) NOT NULL,
+    prof VARCHAR(100) NOT NULL,
+     
+     );
+
+
+
 
 /*tabela feedback*/
 CREATE TABLE feedback (
@@ -39,3 +52,4 @@ CREATE TABLE comment (
     alun_id INT REFERENCES alunos(alun_id)
     created_at TIMESTAMP DEFAULT now(),
 );
+
