@@ -25,16 +25,16 @@ Waldo Luis de Lucca' );
 );
 
 INSERT INTO feedback(
-    feed_id,title,curso_id,alun_id,created_at
+    feed_id,title,curso_id,alun_id
 ) VALUES 
-('Palmeiras ganhou ontem', 2), 
-('A melhor lanchonete de Capivari é  Sandubrothers', 2);
+('a Materia de BD é incrivel', 2), 
+('Professores que Torcem para o São Paulo são os Melhores', 2);
 
 
-INSERT INTO comments (
-    comment, post_id, user_id
+INSERT INTO comment (
+    comment_id, comment, feed_id, alun_id
 ) VALUES 
-('Palmeiras jogou muito bem', 2, 1), 
+('o Professor Moises é muito sábio ', 2, 1), 
 ('Alguns alunos faltaram', 1, 1), 
-('Hoje é lanche free no Sandubrothers', 3, 2);
+(' São os Maiores do Brasil', 3, 2);
 
