@@ -1,55 +1,46 @@
-/*Tabela alunos*/
+/* Tabela alunos */
 CREATE TABLE alunos (
     alun_id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    curso VARCHAR(100) NOT NULL UNIQUE,
-    Periodo VARCHAR(100) NOT NULL UNIQUE,
+    curso VARCHAR(100) NOT NULL,
+    periodo VARCHAR(100) NOT NULL,
     created_at TIMESTAMP DEFAULT now()
-    );
-
-
-/*Tabela cursos*/
-CREATE TABLE cursos (
-    Instituição SERIAL PRIMARY KEY,
-     curso_id VARCHAR(100) NOT NULL,
-    Nivel VARCHAR(100) NOT NULL,
-    Tempo VARCHAR(100) NOT NULL,
-    Periodo VARCHAR(100) NOT NULL,
-
 );
 
+/* Tabela cursos */
+CREATE TABLE cursos (
+    curso_id SERIAL PRIMARY KEY,
+    nome_curso VARCHAR(100) NOT NULL,
+    nivel VARCHAR(100) NOT NULL,
+    tempo VARCHAR(100) NOT NULL,
+    periodo VARCHAR(100) NOT NULL
+);
 
-/*Tabela aulas*/
+/* Tabela aulas */
 CREATE TABLE aulas (
-    Materias SERIAL PRIMARY KEY,
-     horario VARCHAR(100) NOT NULL,
-    avaliações VARCHAR(100) NOT NULL,
-     VARCHAR(100) NOT NULL,
-    alun_id VARCHAR(100) NOT NULL,
-    prof VARCHAR(100) NOT NULL,
-     
-     );
+    aula_id SERIAL PRIMARY KEY,
+    materia VARCHAR(100) NOT NULL,
+    horario VARCHAR(100) NOT NULL,
+    alun_id INT REFERENCES alunos(alun_id),
+    prof VARCHAR(100) NOT NULL
+);
 
-
-
-
-/*tabela feedback*/
+/* Tabela feedback */
 CREATE TABLE feedback (
     feed_id SERIAL PRIMARY KEY,
     title VARCHAR(100) NOT NULL,
     description TEXT,
-     curso_id INT REFERENCES cursos(curso_id),
-    alun_id INT REFERENCES alunos (alun_id)
-     created_at TIMESTAMP DEFAULT now(),
+    curso_id INT REFERENCES cursos(curso_id),
+    alun_id INT REFERENCES alunos(alun_id),
+    created_at TIMESTAMP DEFAULT now()
 );
 
-/*tabela de comentarios*/
+/* Tabela de comentários */
 CREATE TABLE comment (
     comment_id SERIAL PRIMARY KEY,
     comment TEXT NOT NULL,
     feed_id INT REFERENCES feedback(feed_id),
-    alun_id INT REFERENCES alunos(alun_id)
-    created_at TIMESTAMP DEFAULT now(),
+    alun_id INT REFERENCES alunos(alun_id),
+    created_at TIMESTAMP DEFAULT now()
 );
-
