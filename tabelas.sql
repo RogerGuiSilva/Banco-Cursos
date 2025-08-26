@@ -11,7 +11,7 @@ CREATE TABLE alunos (
 /* Tabela cursos */
 CREATE TABLE cursos (
     curso_id SERIAL PRIMARY KEY,
-    nome_curso VARCHAR(100) NOT NULL,
+     nome_curso VARCHAR(100) NOT NULL,
     nivel VARCHAR(100) NOT NULL,
     tempo VARCHAR(100) NOT NULL,
     periodo VARCHAR(100) NOT NULL
