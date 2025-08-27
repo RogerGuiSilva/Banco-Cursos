@@ -19,7 +19,7 @@ INSERT INTO feedback (title,alun_id) VALUES
 ('Professores que torcem para o São Paulo são os melhores', 1, 2);
 
 /* Inserir comentários */
-INSERT INTO comment (comment, feed_id, alun_id) VALUES
+INSERT INTO comments (comment, feed_id, alun_id) VALUES
 ('O Professor Moises é muito sábio', 1, 1),
 ('Alguns alunos faltaram', 1, 2),
 ('São os maiores do Brasil', 2, 2);
