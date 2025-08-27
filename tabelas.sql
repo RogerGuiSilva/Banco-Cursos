@@ -21,7 +21,9 @@ CREATE TABLE cursos (
 CREATE TABLE aulas (
     aula_id SERIAL PRIMARY KEY,
     materia VARCHAR(100) NOT NULL,
-    horario VARCHAR(100) NOT NULL,
+    hora_inicio TIME NOT NULL,
+    hora_fim TIME NOT NULL,
+    avaliacoes VARCHAR(100) NOT NULL,
     alun_id INT REFERENCES alunos(alun_id),
     prof VARCHAR(100) NOT NULL
 );
