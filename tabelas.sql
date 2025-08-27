@@ -39,7 +39,7 @@ CREATE TABLE feedback (
 );
 
 /* Tabela de comentários */
-CREATE TABLE comment (
+CREATE TABLE comments (
     comment_id SERIAL PRIMARY KEY,
     comment TEXT NOT NULL,
     feed_id INT REFERENCES feedback(feed_id),
