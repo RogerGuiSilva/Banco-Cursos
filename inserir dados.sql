@@ -9,12 +9,12 @@ INSERT INTO cursos (nome_curso, nivel, tempo, periodo) VALUES
 ('Engenharia de Software', 'Tecnologo', '3 anos', 'Noturno');
 
 /* Inserir aulas */
-INSERT INTO aulas (materia, horario, avaliacoes, alun_id, prof) VALUES
-('Banco de Dados 1', '19:00 às 22:30', 'Provas e Trabalhos', 1, 'Moises Francisco Olimpio Filho'),
-('Sistemas Operacionais', '19:00 às 22:30', 'Provas e Trabalhos', 1, 'Edivaldo Serafim');
+INSERT INTO aulas (materia, hora_inicio, hora_fim, avaliacoes, alun_id, prof) VALUES
+('Banco de Dados 1', '19:00:00', '22:30:00', 'Provas e Trabalhos', 1, 'Moises Francisco Olimpio Filho'),
+('Sistemas Operacionais', '19:00:00', '22:30:00', 'Provas e Trabalhos', 1, 'Edivaldo Serafim');
 
 /* Inserir feedback */
-INSERT INTO feedback (title, curso_id, alun_id) VALUES
+INSERT INTO feedback (title,alun_id) VALUES
 ('A matéria de BD é incrível', 1, 1),
 ('Professores que torcem para o São Paulo são os melhores', 1, 2);
 
