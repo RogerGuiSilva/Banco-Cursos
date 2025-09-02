@@ -1,7 +1,5 @@
 
-/* 
-   INSERT cursos
- */
+/* INSERT cursos*/
 INSERT INTO cursos (nome_curso, nivel, tempo, periodo) VALUES
 ('Técnico em Alimentos', 'Técnico', 'Variável', 'Concomitante/Subsequente'),
 ('Técnico em Recursos Humanos', 'Técnico', 'Variável', 'Concomitante/Subsequente (EAD com aulas presenciais)'),
@@ -11,9 +9,7 @@ INSERT INTO cursos (nome_curso, nivel, tempo, periodo) VALUES
 ('Auxiliar Administrativo', 'Extensão', 'Curta Duração', 'EAD'),
 ('Outros cursos de curta duração', 'Extensão', 'Curta Duração', 'Variável');
 
-/*
-   INSERT alunos
-*/
+/*INSERT alunos*/
 INSERT INTO alunos (matricula, name, email, curso, semestre, periodo) VALUES
 ('CV3096629', 'Amanda Bueno Machado', 'amanda@gmail.com', 'DS', '2º semestre', 'Noturno'),
 ('CV3095215', 'Andrei Luis Livramento dos Santos', 'andrei@gmail.com', 'DS', '2º semestre', 'Noturno'),
@@ -55,9 +51,7 @@ INSERT INTO alunos (matricula, name, email, curso, semestre, periodo) VALUES
 ('CV3102653', 'Vinicius Cavallari Nascimento', 'vinicius@gmail.com', 'DS', '2º semestre', 'Noturno'),
 ('CV3025195', 'Walker Alessandro de Souza', 'walker@gmail.com', 'DS', '2º semestre', 'Noturno');
 
-/*
-   INSERT aulas
-*/
+/*INSERT aulas*/
 INSERT INTO aulas (dia, materia, hora_inicio, hora_fim, avaliacoes, alun_id, prof) VALUES
 ('Segunda Feira', 'SISTEMAS OPERACIONAIS', '19:00:00', '22:30:00', 'Provas e Trabalhos', 'CV3096611', 'Edivaldo Serafim'),
 ('Terça Feira', 'BANCO DE DADOS', '19:00:00', '22:30:00', 'Provas e Trabalhos', 'CV3102653', 'Moises Francisco Olimpio Filho'),
@@ -66,9 +60,7 @@ INSERT INTO aulas (dia, materia, hora_inicio, hora_fim, avaliacoes, alun_id, pro
 ('Quinta Feira', 'PROGRAMAÇÃO ORIENTADA A OBJETOS', '21:00:00', '22:30:00', 'Provas e Trabalhos', 'CV3095436', 'Rafael Wendel Pinheiro'),
 ('Sexta Feira', 'ESTRUTURA DE DADOS 1', '19:00:00', '22:30:00', 'Provas e Trabalhos', 'CV3103234', 'Vitor Brandi Junior');
 
-/* 
-   INSERT feedback
-*/
+/* INSERT feedback*/
 INSERT INTO feedback (title, description, curso_id, alun_id) VALUES
 ('Aula de Banco de Dados', 'Meu sonho era ter aula de BD.', 1, 'CV3103234'),
 ('Sistemas Operacionais', 'Adoro as aulas do Professor Edvaldo.', 1, 'CV3095126'),
@@ -76,9 +68,7 @@ INSERT INTO feedback (title, description, curso_id, alun_id) VALUES
 ('Engenharia de Software', 'Estou gostando muito da matéria.', 1, 'CV3102891'),
 ('Programação Orientada a Objetos', 'Java é Vida.', 1, 'CV3095436');
 
-/* 
-   INSERT comments
-*/
+/* INSERT comments*/
 INSERT INTO comments (comment, feed_id, alun_id) VALUES
 ('Também adoro Banco de Dados, o professor explica muito bem!', 1, 'CV3096611'),
 ('Concordo, o Professor Edvaldo é excelente nas explicações.', 2, 'CV309698X'),
